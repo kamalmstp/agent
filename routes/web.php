@@ -9,4 +9,4 @@ Route::get('/', function () {
 
 Route::get('/penduduks', [PendudukController::class, 'index'])->name('penduduks.index');
 
-Route::post('/api/penduduks', [PendudukController::class, 'store']);
+Route::post('/api/penduduks', [PendudukController::class, 'store'])->middleware('api');
