@@ -16,6 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->group('api', [
             EnsureFrontendRequestsAreStateful::class,
             SubstituteBindings::class,
+            App\Http\Middleware\ApiTokenMiddleware::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
