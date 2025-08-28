@@ -9,6 +9,6 @@ Route::get('/', function () {
 
 Route::get('/penduduks', [PendudukController::class, 'index'])->name('penduduks.index');
 
-Route::middleware('api')->group(function () {
-    Route::post('/api/penduduks', [PendudukController::class, 'store']);
-});
+// Route::middleware('api')->group(function () {
+//     Route::post('/api/penduduks', [PendudukController::class, 'store']);
+// });
