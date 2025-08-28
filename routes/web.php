@@ -10,6 +10,5 @@ Route::get('/', function () {
 Route::get('/penduduks', [PendudukController::class, 'index'])->name('penduduks.index');
 
 Route::middleware('api')->group(function () {
-    // Tambahkan rute API lainnya di sini jika diperlukan
-    Route::post('/penduduks', [PendudukController::class, 'store']);
+    Route::post('/api/penduduks', [PendudukController::class, 'store']);
 });
